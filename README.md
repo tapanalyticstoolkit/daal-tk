@@ -4,11 +4,11 @@
 It is used along with [spark-tk](https://github.com/tapanalyticstoolkit/spark-tk) frames, 
 which provide an API for creating and manipulating frames of data.
 
-##What's New
+## What's new
 
 This is the initial release of the daal-tk library
 
-## Known Issues
+## Known issues
 
 None.
 
