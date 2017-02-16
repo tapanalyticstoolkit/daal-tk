@@ -35,7 +35,7 @@ trait DaalModel {
       tmpDir = Files.createTempDirectory("sparktk-scoring-model")
       save(sc, tmpDir.toString)
       val sourcePath = this.getClass.getProtectionDomain.getCodeSource.getLocation.toString
-      ScoringModelUtils.saveToMar(marSavePath, this.getClass.getName, tmpDir, classOf[DaalTkModelAdapter].getName, Some(sourcePath))
+      ScoringModelUtils.saveToMar(sc, marSavePath, this.getClass.getName, tmpDir, classOf[DaalTkModelAdapter].getName, Some(sourcePath))
     }
     finally {
       sys.addShutdownHook(FileUtils.deleteQuietly(tmpDir.toFile)) // Delete temporary directory on exit
