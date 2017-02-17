@@ -1,8 +1,23 @@
 # daal-tk
 
 **daal-tk** is a library that provides access to Intel DAAL models and operations.
-It is used along with [spark-tk](https://github.com/trustedanalytics/spark-tk) frames, 
+It is used along with [spark-tk](https://github.com/tapanalyticstoolkit/spark-tk) frames, 
 which provide an API for creating and manipulating frames of data.
+
+## What's new
+
+This is the initial release of the daal-tk library
+
+## Known issues
+
+None.
+
+##Related Repos
+
+[https://github.com/tapanalyticstoolkit/daal-parcel](https://github.com/tapanalyticstoolkit/daal-parcel)  
+[https://github.com/tapanalyticstoolkit/daal-utils](https://github.com/tapanalyticstoolkit/daal-utils)
+
+##Summary
 
 daal-tk supports the following Intel DAAL models from release 2016.2.181:
 * Naive Bayes (classification)
@@ -16,13 +31,13 @@ daal-tk supports the following Intel DAAL models from release 2016.2.181:
 * Python 2.7
 * Intel DAAL
 * spark-tk
-* [Python dependencies installed](https://github.com/trustedanalytics/daal-tk/blob/master/python/requirements.txt)
+* [Python dependencies installed](https://github.com/tapanalyticstoolkit/daal-tk/blob/master/python/requirements.txt)
 
 ### Setting up your build environment and pom.xml files
 
-Execute the following script to install the necessary [DAAL](https://github.com/trustedanalytics/daal-install/tree/daal-2016.2.181) binaries in your home directory
+Execute the following script to install the necessary [DAAL](https://software.intel.com/en-us/blogs/daal) binaries in your home directory
 ```
-curl https://raw.githubusercontent.com/trustedanalytics/daal-utils/0.1.0-daal-2016.2.181/install.sh | bash /dev/stdin
+curl https://raw.githubusercontent.com/tapanalyticstoolkit/daal-utils/0.1.0-daal-2016.2.181/install.sh | bash /dev/stdin 
 ```
 
 If you already have the DAAL binaries available on your machine make sure `LD_LIBRARY_PATH` environment variable is set to their location.
@@ -141,9 +156,10 @@ model.
     k                   = 2
     label_column        = predicted_cluster
     observation_columns = [u'data']
-    
+
+	(Update name and link below)
 The trained model can also be exported to a .mar file, in order to be used
-along with the [scoring engine](https://github.com/trustedanalytics/scoring-engine):
+along with the [scoring engine](https://github.com/tapanalyticstoolkit/model-scoring-java):
 
     >>> full_path = model.export_to_mar("sandbox/myKMeansModel.mar")
     
