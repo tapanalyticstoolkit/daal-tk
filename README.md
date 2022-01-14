@@ -1,3 +1,6 @@
+# EOL Notice
+daal-tk, version v0.74 will no longer be available after Jan 15, 2022 and will not be supported with any additional functional, security, or other updates. All versions are provided as is. Intel recommends that users of daal-tk uninstall and discontinue use as soon as possible.
+
 # daal-tk
 
 **daal-tk** is a library that provides access to Intel DAAL models and operations.
